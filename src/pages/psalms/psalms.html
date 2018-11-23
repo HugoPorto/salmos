@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>Salmos</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content id="contentMain">
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title id="cardTitleMain">
+        Pânorama Geral
+      </ion-card-title>
+      <ion-card-title class="subtitle">DE QUE TRATA ESSE LIVRO?</ion-card-title>
+      <p id="textMain">
+        Salmos é um livro de cânticos.
+      </p>
+      <ion-card-title class="subtitle">PARA SABER MAIS</ion-card-title>
+      <p id="textMain">
+        Salmos (do grego Ψαλμός, Música, pois a palavra que intitula muitos salmos no texto hebraico é Mizmor מזמור, Músical) ou
+        Tehilim (do hebraico תהילים, Louvores) é um livro do Tanakh (fazendo parte dos escritos ou Ketuvim) e da Bíblia Cristã,
+        vem depois do Livro de Jó, pois este encerra a sequência (AO 1943: seqüência) de livros históricos, e antes do Livro
+        dos Provérbios, iniciando os livros proféticos e poéticos em ordem cronológica,[1][2] sendo o primeiro livro a falar
+        claramente do Messias (ou Cristo) e seu reinado, e do Juízo Final. É o maior livro de toda Bíblia [3] e constitui-se
+        de 150 (ou 151 segundo a Igreja Ortodoxa) cânticos e poemas proféticos, que são o coração do Antigo Testamento, é
+        a grande síntese que reúne todos os temas e estilos dessa parte da Bíblia,[4] utilizados pelo antigo Israel como
+        hinário no Templo de Jerusalém, e hoje são utilizados como orações ou louvores, no Judaísmo, no Cristianismo e também
+        no Islamismo (o Corão no cap. 17, verso 82, refere os salmos como "um bálsamo"). Tal fato, comum aos três monoteísmos
+        semitas, não tem paralelo, dado que judeus, cristãos e muçulmanos acreditam nos Salmos que foram escritos em hebraico,
+        depois traduzidos para o grego e latim.
+      </p>
+      <br>
+      <p>
+        <strong>Exatraído da Wikpédia</strong>
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngFor="let salmo of salmos">
+    <ion-card-content>
+      <ion-card-title>
+        Salmo {{salmo.numero}}º
+      </ion-card-title>
+      <p style="text-align:justify">
+        {{salmo.texto}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

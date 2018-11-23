@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Bible
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content id="contentMain">
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <button ion-item (click)="openPage('NewTestamentPage')">
+          <ion-icon name="book" item-start></ion-icon>
+          Novo Testamento
+        </button>
+        <button ion-item>
+          <ion-icon name="book" item-start></ion-icon>
+          Antigo Testamento
+        </button>
+        <button ion-item (click)="openPage('PsalmsPage')">
+          <ion-icon name="book" item-start></ion-icon>
+          Salmos
+        </button>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
