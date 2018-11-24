@@ -7,9 +7,10 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
   templateUrl: 'show-psalm.html',
 })
 export class ShowPsalmPage {
-  salmos: any;
-  salmo: string;
-  numeroSalmo: string;
+  public salmos: any;
+  public salmo: string;
+  public numeroSalmo: string;
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -3275,6 +3276,7 @@ export class ShowPsalmPage {
       if(this.salmos[i].numero == numero){
         this.numeroSalmo = this.salmos[i].numero;
         this.salmo = this.salmos[i].texto;
+        console.log("Número do Salmo => " + this.numeroSalmo);
       }
     }
   }

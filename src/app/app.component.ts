@@ -25,6 +25,5 @@ export class MyApp {
   private openHomePage(splashScreen: SplashScreen) {
     splashScreen.hide();
     this.rootPage = TabsPage;
-    console.log('Banco de Dados criado com sucesso!')
   }
 }

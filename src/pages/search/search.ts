@@ -8,6 +8,8 @@ import { ShowPsalmPage } from '../show-psalm/show-psalm';
   templateUrl: 'search.html',
 })
 export class SearchPage {
+  private title = "Busca";
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -22,5 +24,9 @@ export class SearchPage {
   openPsalm(value) {
     let showPsalms = this.modal.create('ShowPsalmPage', { value: value });
     showPsalms.present();
+  }
+
+  public getTitleSearchPage(){
+    return this.title;
   }
 }

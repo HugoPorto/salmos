@@ -25,19 +25,19 @@ var map = {
 		150
 	],
 	"../pages/psalms/psalms.module": [
-		159
+		152
 	],
 	"../pages/search/search.module": [
-		151
-	],
-	"../pages/show-psalm/show-psalm.module": [
 		160
 	],
+	"../pages/show-psalm/show-psalm.module": [
+		151
+	],
 	"../pages/tabs/tabs.module": [
-		153
+		154
 	],
 	"../pages/tests/tests.module": [
-		158
+		161
 	]
 };
 function webpackAsyncContext(req) {
@@ -64,7 +64,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewTestamentPageModule", function() { return NewTestamentPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__new_testament__ = __webpack_require__(253);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__new_testament__ = __webpack_require__(254);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -99,365 +99,10 @@ var NewTestamentPageModule = /** @class */ (function () {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchPageModule", function() { return SearchPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__search__ = __webpack_require__(152);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-var SearchPageModule = /** @class */ (function () {
-    function SearchPageModule() {
-    }
-    SearchPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__search__["a" /* SearchPage */],
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__search__["a" /* SearchPage */]),
-            ],
-        })
-    ], SearchPageModule);
-    return SearchPageModule;
-}());
-
-//# sourceMappingURL=search.module.js.map
-
-/***/ }),
-
-/***/ 152:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var SearchPage = /** @class */ (function () {
-    function SearchPage(navCtrl, navParams, modal) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.modal = modal;
-    }
-    SearchPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad SearchPage');
-    };
-    SearchPage.prototype.openPsalm = function (value) {
-        var showPsalms = this.modal.create('ShowPsalmPage', { value: value });
-        showPsalms.present();
-    };
-    SearchPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-search',template:/*ion-inline-start:"D:\IONICAPPS\salmos\src\pages\search\search.html"*/'<ion-header>\n  <ion-navbar color="dark">\n    <ion-title>Busca</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content id="contentMain">\n  <ion-card>\n    <ion-card-content>\n      <ion-card-title id="cardTitleMain">\n        Clique em um número para fazer a busca\n      </ion-card-title>\n      <ion-grid class="borderMain" style="background-color: #d7d7d7">\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(1)">\n            1\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(2)">\n            2\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(3)">\n            3\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(4)">\n            4\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(5)">\n            5\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(6)">\n            6\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(7)">\n            7\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(8)">\n            8\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(9)">\n            9\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(10)">\n            10\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(11)">\n            11\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(12)">\n            12\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(13)">\n            13\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(14)">\n            14\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(15)">\n            15\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(16)">\n            16\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(17)">\n            17\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(18)">\n            18\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(19)">\n            19\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(20)">\n            20\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(21)">\n            21\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(22)">\n            22\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(23)">\n            23\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(24)">\n            24\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(25)">\n            25\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(26)">\n            26\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(27)">\n            27\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(28)">\n            28\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(29)">\n            29\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(30)">\n            30\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(31)">\n            31\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(32)">\n            32\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(33)">\n            33\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(34)">\n            34\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(35)">\n            35\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(36)">\n            36\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(37)">\n            37\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(38)">\n            38\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(39)">\n            39\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(40)">\n            40\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(41)">\n            41\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(42)">\n            42\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(43)">\n            43\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(44)">\n            44\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(45)">\n            45\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(46)">\n            46\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(47)">\n            47\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(48)">\n            48\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(49)">\n            49\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(50)">\n            50\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(51)">\n            51\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(52)">\n            52\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(53)">\n            53\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(54)">\n            54\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(55)">\n            55\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(56)">\n            56\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(57)">\n            57\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(58)">\n            58\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(59)">\n            59\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(60)">\n            60\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(61)">\n            61\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(62)">\n            62\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(63)">\n            63\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(64)">\n            64\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(65)">\n            65\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(66)">\n            66\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(67)">\n            67\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(68)">\n            68\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(69)">\n            69\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(70)">\n            70\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(71)">\n            71\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(72)">\n            72\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(73)">\n            73\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(74)">\n            74\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(75)">\n            75\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(76)">\n            76\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(77)">\n            77\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(78)">\n            78\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(79)">\n            79\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(80)">\n            80\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(81)">\n            81\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(82)">\n            82\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(83)">\n            83\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(84)">\n            84\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(85)">\n            85\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(86)">\n            86\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(87)">\n            87\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(88)">\n            88\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(89)">\n            89\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(90)">\n            90\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(91)">\n            91\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(92)">\n            92\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(93)">\n            93\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(94)">\n            94\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(95)">\n            95\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(96)">\n            96\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(97)">\n            97\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(98)">\n            98\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(99)">\n            99\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(100)">\n            100\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(101)">\n            101\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(102)">\n            102\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(103)">\n            103\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(104)">\n            104\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(105)">\n            105\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(106)">\n            106\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(107)">\n            107\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(108)">\n            108\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(109)">\n            109\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(110)">\n            110\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(111)">\n            111\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(112)">\n            112\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(113)">\n            113\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(114)">\n            114\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(115)">\n            115\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(116)">\n            116\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(117)">\n            117\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(118)">\n            118\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(119)">\n            119\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(120)">\n            120\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(121)">\n            121\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(122)">\n            122\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(123)">\n            123\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(124)">\n            124\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(125)">\n            125\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(126)">\n            126\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(127)">\n            127\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(128)">\n            128\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(129)">\n            129\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(130)">\n            130\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(131)">\n            131\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(132)">\n            132\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(133)">\n            133\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(134)">\n            134\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(135)">\n            135\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(136)">\n            136\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(137)">\n            137\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(138)">\n            138\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(139)">\n            139\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(140)">\n            140\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(141)">\n            141\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(142)">\n            142\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(143)">\n            143\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(144)">\n            144\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(145)">\n            145\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(146)">\n            146\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(147)">\n            147\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(148)">\n            148\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(149)">\n            149\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(150)">\n            150\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n    </ion-card-content>\n  </ion-card>\n</ion-content>'/*ion-inline-end:"D:\IONICAPPS\salmos\src\pages\search\search.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ModalController */]])
-    ], SearchPage);
-    return SearchPage;
-}());
-
-//# sourceMappingURL=search.js.map
-
-/***/ }),
-
-/***/ 153:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsPageModule", function() { return TabsPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs__ = __webpack_require__(154);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-var TabsPageModule = /** @class */ (function () {
-    function TabsPageModule() {
-    }
-    TabsPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__tabs__["a" /* TabsPage */],
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tabs__["a" /* TabsPage */]),
-            ],
-        })
-    ], TabsPageModule);
-    return TabsPageModule;
-}());
-
-//# sourceMappingURL=tabs.module.js.map
-
-/***/ }),
-
-/***/ 154:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__bible_bible__ = __webpack_require__(155);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__credits_credits__ = __webpack_require__(156);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(157);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__search_search__ = __webpack_require__(152);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-// import { PsalmsPage } from '../psalms/psalms';
-
-var TabsPage = /** @class */ (function () {
-    function TabsPage() {
-        this.tab1Root = __WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */];
-        this.tab2Root = __WEBPACK_IMPORTED_MODULE_1__bible_bible__["a" /* BiblePage */];
-        this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__credits_credits__["a" /* CreditsPage */];
-        // tab4Root = PsalmsPage;
-        this.tab5Root = __WEBPACK_IMPORTED_MODULE_4__search_search__["a" /* SearchPage */];
-    }
-    TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-tabs',template:/*ion-inline-start:"D:\IONICAPPS\salmos\src\pages\tabs\tabs.html"*/'<ion-tabs color="dark">\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab5Root" tabTitle="Busca" tabIcon="search"></ion-tab>\n  <!-- <ion-tab [root]="tab4Root" tabTitle="Salmos" tabIcon="book"></ion-tab> -->\n  <ion-tab [root]="tab3Root" tabTitle="Créditos" tabIcon="contacts"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"D:\IONICAPPS\salmos\src\pages\tabs\tabs.html"*/
-        }),
-        __metadata("design:paramtypes", [])
-    ], TabsPage);
-    return TabsPage;
-}());
-
-//# sourceMappingURL=tabs.js.map
-
-/***/ }),
-
-/***/ 155:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BiblePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BiblePage = /** @class */ (function () {
-    function BiblePage(navCtrl) {
-        this.navCtrl = navCtrl;
-    }
-    BiblePage.prototype.openPage = function (page) {
-        this.navCtrl.push(page);
-    };
-    BiblePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-bible',template:/*ion-inline-start:"D:\IONICAPPS\salmos\src\pages\bible\bible.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Bible\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content id="contentMain">\n  <ion-card>\n    <ion-card-content>\n      <ion-list>\n        <button ion-item (click)="openPage(\'NewTestamentPage\')">\n          <ion-icon name="book" item-start></ion-icon>\n          Novo Testamento\n        </button>\n        <button ion-item>\n          <ion-icon name="book" item-start></ion-icon>\n          Antigo Testamento\n        </button>\n        <button ion-item (click)="openPage(\'PsalmsPage\')">\n          <ion-icon name="book" item-start></ion-icon>\n          Salmos\n        </button>\n      </ion-list>\n    </ion-card-content>\n  </ion-card>\n</ion-content>'/*ion-inline-end:"D:\IONICAPPS\salmos\src\pages\bible\bible.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
-    ], BiblePage);
-    return BiblePage;
-}());
-
-//# sourceMappingURL=bible.js.map
-
-/***/ }),
-
-/***/ 156:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CreditsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var CreditsPage = /** @class */ (function () {
-    function CreditsPage(navCtrl) {
-        this.navCtrl = navCtrl;
-    }
-    CreditsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-credits',template:/*ion-inline-start:"D:\IONICAPPS\salmos\src\pages\credits\credits.html"*/'<ion-header>\n  <ion-navbar color="dark">\n    <ion-title>\n      Créditos\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content id="contentMain">\n  <ion-card>\n    <ion-card-content>\n      <h2>\n        <strong>DESENVOLVIMENTO</strong>\n      </h2>\n      <p>\n        Focux Systems\n      </p>\n    </ion-card-content>\n  </ion-card>\n</ion-content>'/*ion-inline-end:"D:\IONICAPPS\salmos\src\pages\credits\credits.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
-    ], CreditsPage);
-    return CreditsPage;
-}());
-
-//# sourceMappingURL=credits.js.map
-
-/***/ }),
-
-/***/ 157:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var HomePage = /** @class */ (function () {
-    function HomePage(navCtrl) {
-        this.navCtrl = navCtrl;
-    }
-    HomePage.prototype.openUsePage = function () {
-        this.navCtrl.push('PsalmsPage');
-    };
-    HomePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"D:\IONICAPPS\salmos\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar color="dark">\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content id="contentMain">\n  <ion-card>\n    <ion-card-content>\n      <ion-card-title id="cardTitleMain">\n        Sobre\n      </ion-card-title>\n      <p id="textMain">\n        Está aplicação trata em específico de um dos livros mais importantes da bíblia e fonte de consolo e fortaleza para muitos\n        corações cançados. Nesta primeira versão você terá acesso apenas as leituras básicas. Nas próximas versões a aplicação\n        será enrriquecida, de modo a oferecer as melhores ferramentas para entender esse livro tão importante para o cristianismo.\n      </p>\n    </ion-card-content>\n  </ion-card>\n</ion-content>'/*ion-inline-end:"D:\IONICAPPS\salmos\src\pages\home\home.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
-    ], HomePage);
-    return HomePage;
-}());
-
-//# sourceMappingURL=home.js.map
-
-/***/ }),
-
-/***/ 158:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TestsPageModule", function() { return TestsPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tests__ = __webpack_require__(254);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-var TestsPageModule = /** @class */ (function () {
-    function TestsPageModule() {
-    }
-    TestsPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__tests__["a" /* TestsPage */],
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tests__["a" /* TestsPage */]),
-            ],
-        })
-    ], TestsPageModule);
-    return TestsPageModule;
-}());
-
-//# sourceMappingURL=tests.module.js.map
-
-/***/ }),
-
-/***/ 159:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PsalmsPageModule", function() { return PsalmsPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__psalms__ = __webpack_require__(255);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-var PsalmsPageModule = /** @class */ (function () {
-    function PsalmsPageModule() {
-    }
-    PsalmsPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__psalms__["a" /* PsalmsPage */],
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__psalms__["a" /* PsalmsPage */]),
-            ],
-        })
-    ], PsalmsPageModule);
-    return PsalmsPageModule;
-}());
-
-//# sourceMappingURL=psalms.module.js.map
-
-/***/ }),
-
-/***/ 160:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ShowPsalmPageModule", function() { return ShowPsalmPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__show_psalm__ = __webpack_require__(256);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__show_psalm__ = __webpack_require__(255);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -487,40 +132,15 @@ var ShowPsalmPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 204:
+/***/ 152:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(227);
-
-
-Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
-//# sourceMappingURL=main.js.map
-
-/***/ }),
-
-/***/ 227:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PsalmsPageModule", function() { return PsalmsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(274);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_bible_bible__ = __webpack_require__(155);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_credits_credits__ = __webpack_require__(156);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(157);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_splash_screen__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_new_testament_new_testament_module__ = __webpack_require__(150);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_psalms_psalms_module__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_tabs_tabs_module__ = __webpack_require__(153);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_tests_tests_module__ = __webpack_require__(158);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_search_search_module__ = __webpack_require__(151);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_show_psalm_show_psalm_module__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__psalms__ = __webpack_require__(153);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -530,169 +150,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-var AppModule = /** @class */ (function () {
-    function AppModule() {
+var PsalmsPageModule = /** @class */ (function () {
+    function PsalmsPageModule() {
     }
-    AppModule = __decorate([
+    PsalmsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_4__pages_bible_bible__["a" /* BiblePage */],
-                __WEBPACK_IMPORTED_MODULE_5__pages_credits_credits__["a" /* CreditsPage */],
-                __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_2__psalms__["a" /* PsalmsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {
-                    tabsPlacement: 'top'
-                }, {
-                    links: [
-                        { loadChildren: '../pages/new-testament/new-testament.module#NewTestamentPageModule', name: 'NewTestamentPage', segment: 'new-testament', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/search/search.module#SearchPageModule', name: 'SearchPage', segment: 'search', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tests/tests.module#TestsPageModule', name: 'TestsPage', segment: 'tests', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/psalms/psalms.module#PsalmsPageModule', name: 'PsalmsPage', segment: 'psalms', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/show-psalm/show-psalm.module#ShowPsalmPageModule', name: 'ShowPsalmPage', segment: 'show-psalm', priority: 'low', defaultHistory: [] }
-                    ]
-                }),
-                __WEBPACK_IMPORTED_MODULE_9__pages_new_testament_new_testament_module__["NewTestamentPageModule"],
-                __WEBPACK_IMPORTED_MODULE_10__pages_psalms_psalms_module__["PsalmsPageModule"],
-                __WEBPACK_IMPORTED_MODULE_11__pages_tabs_tabs_module__["TabsPageModule"],
-                __WEBPACK_IMPORTED_MODULE_12__pages_tests_tests_module__["TestsPageModule"],
-                __WEBPACK_IMPORTED_MODULE_13__pages_search_search_module__["SearchPageModule"],
-                __WEBPACK_IMPORTED_MODULE_14__pages_show_psalm_show_psalm_module__["ShowPsalmPageModule"]
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__psalms__["a" /* PsalmsPage */]),
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
-            entryComponents: [
-                __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_4__pages_bible_bible__["a" /* BiblePage */],
-                __WEBPACK_IMPORTED_MODULE_5__pages_credits_credits__["a" /* CreditsPage */],
-                __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
-            ],
-            providers: [
-                __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__["a" /* StatusBar */],
-                __WEBPACK_IMPORTED_MODULE_8__ionic_native_splash_screen__["a" /* SplashScreen */],
-                { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] }
-            ]
         })
-    ], AppModule);
-    return AppModule;
+    ], PsalmsPageModule);
+    return PsalmsPageModule;
 }());
 
-//# sourceMappingURL=app.module.js.map
+//# sourceMappingURL=psalms.module.js.map
 
 /***/ }),
 
-/***/ 253:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewTestamentPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var NewTestamentPage = /** @class */ (function () {
-    function NewTestamentPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    NewTestamentPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad NewTestamentPage');
-    };
-    NewTestamentPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-new-testament',template:/*ion-inline-start:"D:\IONICAPPS\salmos\src\pages\new-testament\new-testament.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Novo Testamento</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"D:\IONICAPPS\salmos\src\pages\new-testament\new-testament.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
-    ], NewTestamentPage);
-    return NewTestamentPage;
-}());
-
-//# sourceMappingURL=new-testament.js.map
-
-/***/ }),
-
-/***/ 254:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TestsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var TestsPage = /** @class */ (function () {
-    function TestsPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.peoples = [
-            {
-                "name": "Douglas  Pace"
-            },
-            {
-                "name": "Mcleod  Mueller"
-            },
-            {
-                "name": "Day  Meyers"
-            },
-            {
-                "name": "Aguirre  Ellis"
-            },
-            {
-                "name": "Cook  Tyson"
-            }
-        ];
-    }
-    TestsPage.prototype.ionViewDidLoad = function () {
-        console.log('TestsPage rodando...');
-    };
-    TestsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-tests',template:/*ion-inline-start:"D:\IONICAPPS\salmos\src\pages\tests\tests.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Tests</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n  <ion-item *ngFor="let item of peoples">\n      {{item.name}}\n  </ion-item>\n</ion-content>\n'/*ion-inline-end:"D:\IONICAPPS\salmos\src\pages\tests\tests.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
-    ], TestsPage);
-    return TestsPage;
-}());
-
-//# sourceMappingURL=tests.js.map
-
-/***/ }),
-
-/***/ 255:
+/***/ 153:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3996,7 +3474,477 @@ var PsalmsPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 256:
+/***/ 154:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsPageModule", function() { return TabsPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs__ = __webpack_require__(155);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var TabsPageModule = /** @class */ (function () {
+    function TabsPageModule() {
+    }
+    TabsPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__tabs__["a" /* TabsPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tabs__["a" /* TabsPage */]),
+            ],
+        })
+    ], TabsPageModule);
+    return TabsPageModule;
+}());
+
+//# sourceMappingURL=tabs.module.js.map
+
+/***/ }),
+
+/***/ 155:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__bible_bible__ = __webpack_require__(156);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__credits_credits__ = __webpack_require__(157);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__psalms_psalms__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__search_search__ = __webpack_require__(159);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var TabsPage = /** @class */ (function () {
+    function TabsPage() {
+        this.tab1Root = __WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */];
+        this.tab2Root = __WEBPACK_IMPORTED_MODULE_1__bible_bible__["a" /* BiblePage */];
+        this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__credits_credits__["a" /* CreditsPage */];
+        this.tab4Root = __WEBPACK_IMPORTED_MODULE_4__psalms_psalms__["a" /* PsalmsPage */];
+        this.tab5Root = __WEBPACK_IMPORTED_MODULE_5__search_search__["a" /* SearchPage */];
+    }
+    TabsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-tabs',template:/*ion-inline-start:"D:\IONICAPPS\salmos\src\pages\tabs\tabs.html"*/'<ion-tabs color="dark">\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab5Root" tabTitle="Busca" tabIcon="search"></ion-tab>\n  <ion-tab [root]="tab4Root" tabTitle="Salmos" tabIcon="book"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Créditos" tabIcon="contacts"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"D:\IONICAPPS\salmos\src\pages\tabs\tabs.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], TabsPage);
+    return TabsPage;
+}());
+
+//# sourceMappingURL=tabs.js.map
+
+/***/ }),
+
+/***/ 156:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BiblePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var BiblePage = /** @class */ (function () {
+    function BiblePage(navCtrl) {
+        this.navCtrl = navCtrl;
+    }
+    BiblePage.prototype.openPage = function (page) {
+        this.navCtrl.push(page);
+    };
+    BiblePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-bible',template:/*ion-inline-start:"D:\IONICAPPS\salmos\src\pages\bible\bible.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Bible\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content id="contentMain">\n  <ion-card>\n    <ion-card-content>\n      <ion-list>\n        <button ion-item (click)="openPage(\'NewTestamentPage\')">\n          <ion-icon name="book" item-start></ion-icon>\n          Novo Testamento\n        </button>\n        <button ion-item>\n          <ion-icon name="book" item-start></ion-icon>\n          Antigo Testamento\n        </button>\n        <button ion-item (click)="openPage(\'PsalmsPage\')">\n          <ion-icon name="book" item-start></ion-icon>\n          Salmos\n        </button>\n      </ion-list>\n    </ion-card-content>\n  </ion-card>\n</ion-content>'/*ion-inline-end:"D:\IONICAPPS\salmos\src\pages\bible\bible.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
+    ], BiblePage);
+    return BiblePage;
+}());
+
+//# sourceMappingURL=bible.js.map
+
+/***/ }),
+
+/***/ 157:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CreditsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var CreditsPage = /** @class */ (function () {
+    function CreditsPage(navCtrl) {
+        this.navCtrl = navCtrl;
+    }
+    CreditsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-credits',template:/*ion-inline-start:"D:\IONICAPPS\salmos\src\pages\credits\credits.html"*/'<ion-header>\n  <ion-navbar color="dark">\n    <ion-title>\n      Créditos\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content id="contentMain">\n  <ion-card>\n    <ion-card-content>\n      <h2>\n        <strong>DESENVOLVIMENTO</strong>\n      </h2>\n      <p>\n        Focux Microsystems\n      </p>\n    </ion-card-content>\n  </ion-card>\n</ion-content>'/*ion-inline-end:"D:\IONICAPPS\salmos\src\pages\credits\credits.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
+    ], CreditsPage);
+    return CreditsPage;
+}());
+
+//# sourceMappingURL=credits.js.map
+
+/***/ }),
+
+/***/ 158:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var HomePage = /** @class */ (function () {
+    function HomePage(navCtrl) {
+        this.navCtrl = navCtrl;
+    }
+    HomePage.prototype.openUsePage = function () {
+        this.navCtrl.push('PsalmsPage');
+    };
+    HomePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-home',template:/*ion-inline-start:"D:\IONICAPPS\salmos\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar color="dark">\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content id="contentMain">\n  <ion-card>\n    <ion-card-content>\n      <ion-card-title id="cardTitleMain">\n        Sobre\n      </ion-card-title>\n      <p id="textMain">\n        Está aplicação trata em específico de um dos livros mais importantes da bíblia e fonte de consolo e fortaleza para muitos\n        corações cançados. Nesta primeira versão você terá acesso apenas as leituras básicas. Nas próximas versões a aplicação\n        será enrriquecida, de modo a oferecer as melhores ferramentas para entender esse livro tão importante para o cristianismo.\n      </p>\n    </ion-card-content>\n  </ion-card>\n</ion-content>'/*ion-inline-end:"D:\IONICAPPS\salmos\src\pages\home\home.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
+    ], HomePage);
+    return HomePage;
+}());
+
+//# sourceMappingURL=home.js.map
+
+/***/ }),
+
+/***/ 159:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var SearchPage = /** @class */ (function () {
+    function SearchPage(navCtrl, navParams, modal) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.modal = modal;
+        this.title = "Busca";
+    }
+    SearchPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad SearchPage');
+    };
+    SearchPage.prototype.openPsalm = function (value) {
+        var showPsalms = this.modal.create('ShowPsalmPage', { value: value });
+        showPsalms.present();
+    };
+    SearchPage.prototype.getTitleSearchPage = function () {
+        return this.title;
+    };
+    SearchPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-search',template:/*ion-inline-start:"D:\IONICAPPS\salmos\src\pages\search\search.html"*/'<ion-header>\n  <ion-navbar color="dark">\n    <ion-title>{{getTitleSearchPage()}}</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content id="contentMain">\n  <ion-card>\n    <ion-card-content>\n      <ion-card-title id="cardTitleMain">\n        Clique em um número para fazer a busca\n      </ion-card-title>\n      <ion-grid class="borderMain" style="background-color: #d7d7d7">\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(1)">\n            1\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(2)">\n            2\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(3)">\n            3\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(4)">\n            4\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(5)">\n            5\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(6)">\n            6\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(7)">\n            7\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(8)">\n            8\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(9)">\n            9\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(10)">\n            10\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(11)">\n            11\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(12)">\n            12\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(13)">\n            13\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(14)">\n            14\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(15)">\n            15\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(16)">\n            16\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(17)">\n            17\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(18)">\n            18\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(19)">\n            19\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(20)">\n            20\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(21)">\n            21\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(22)">\n            22\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(23)">\n            23\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(24)">\n            24\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(25)">\n            25\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(26)">\n            26\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(27)">\n            27\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(28)">\n            28\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(29)">\n            29\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(30)">\n            30\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(31)">\n            31\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(32)">\n            32\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(33)">\n            33\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(34)">\n            34\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(35)">\n            35\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(36)">\n            36\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(37)">\n            37\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(38)">\n            38\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(39)">\n            39\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(40)">\n            40\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(41)">\n            41\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(42)">\n            42\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(43)">\n            43\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(44)">\n            44\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(45)">\n            45\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(46)">\n            46\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(47)">\n            47\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(48)">\n            48\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(49)">\n            49\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(50)">\n            50\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(51)">\n            51\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(52)">\n            52\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(53)">\n            53\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(54)">\n            54\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(55)">\n            55\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(56)">\n            56\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(57)">\n            57\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(58)">\n            58\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(59)">\n            59\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(60)">\n            60\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(61)">\n            61\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(62)">\n            62\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(63)">\n            63\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(64)">\n            64\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(65)">\n            65\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(66)">\n            66\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(67)">\n            67\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(68)">\n            68\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(69)">\n            69\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(70)">\n            70\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(71)">\n            71\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(72)">\n            72\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(73)">\n            73\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(74)">\n            74\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(75)">\n            75\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(76)">\n            76\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(77)">\n            77\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(78)">\n            78\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(79)">\n            79\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(80)">\n            80\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(81)">\n            81\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(82)">\n            82\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(83)">\n            83\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(84)">\n            84\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(85)">\n            85\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(86)">\n            86\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(87)">\n            87\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(88)">\n            88\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(89)">\n            89\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(90)">\n            90\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(91)">\n            91\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(92)">\n            92\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(93)">\n            93\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(94)">\n            94\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(95)">\n            95\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(96)">\n            96\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(97)">\n            97\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(98)">\n            98\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(99)">\n            99\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(100)">\n            100\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(101)">\n            101\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(102)">\n            102\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(103)">\n            103\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(104)">\n            104\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(105)">\n            105\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(106)">\n            106\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(107)">\n            107\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(108)">\n            108\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(109)">\n            109\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(110)">\n            110\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(111)">\n            111\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(112)">\n            112\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(113)">\n            113\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(114)">\n            114\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(115)">\n            115\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(116)">\n            116\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(117)">\n            117\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(118)">\n            118\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(119)">\n            119\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(120)">\n            120\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(121)">\n            121\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(122)">\n            122\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(123)">\n            123\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(124)">\n            124\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(125)">\n            125\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(126)">\n            126\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(127)">\n            127\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(128)">\n            128\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(129)">\n            129\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(130)">\n            130\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(131)">\n            131\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(132)">\n            132\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(133)">\n            133\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(134)">\n            134\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(135)">\n            135\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(136)">\n            136\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(137)">\n            137\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(138)">\n            138\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(139)">\n            139\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(140)">\n            140\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(141)">\n            141\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(142)">\n            142\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(143)">\n            143\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(144)">\n            144\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(145)">\n            145\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col class="colBorderMain" (click)="openPsalm(146)">\n            146\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(147)">\n            147\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(148)">\n            148\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(149)">\n            149\n          </ion-col>\n          <ion-col class="colBorderMain" (click)="openPsalm(150)">\n            150\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n    </ion-card-content>\n  </ion-card>\n</ion-content>'/*ion-inline-end:"D:\IONICAPPS\salmos\src\pages\search\search.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ModalController */]])
+    ], SearchPage);
+    return SearchPage;
+}());
+
+//# sourceMappingURL=search.js.map
+
+/***/ }),
+
+/***/ 160:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchPageModule", function() { return SearchPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__search__ = __webpack_require__(159);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var SearchPageModule = /** @class */ (function () {
+    function SearchPageModule() {
+    }
+    SearchPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__search__["a" /* SearchPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__search__["a" /* SearchPage */]),
+            ],
+        })
+    ], SearchPageModule);
+    return SearchPageModule;
+}());
+
+//# sourceMappingURL=search.module.js.map
+
+/***/ }),
+
+/***/ 161:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TestsPageModule", function() { return TestsPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tests__ = __webpack_require__(256);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var TestsPageModule = /** @class */ (function () {
+    function TestsPageModule() {
+    }
+    TestsPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__tests__["a" /* TestsPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tests__["a" /* TestsPage */]),
+            ],
+        })
+    ], TestsPageModule);
+    return TestsPageModule;
+}());
+
+//# sourceMappingURL=tests.module.js.map
+
+/***/ }),
+
+/***/ 205:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(228);
+
+
+Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ 228:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(274);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_bible_bible__ = __webpack_require__(156);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_credits_credits__ = __webpack_require__(157);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_splash_screen__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_new_testament_new_testament_module__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_psalms_psalms_module__ = __webpack_require__(152);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_tabs_tabs_module__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_tests_tests_module__ = __webpack_require__(161);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_search_search_module__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_show_psalm_show_psalm_module__ = __webpack_require__(151);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AppModule = /** @class */ (function () {
+    function AppModule() {
+    }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_4__pages_bible_bible__["a" /* BiblePage */],
+                __WEBPACK_IMPORTED_MODULE_5__pages_credits_credits__["a" /* CreditsPage */],
+                __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {
+                    tabsPlacement: 'top'
+                }, {
+                    links: [
+                        { loadChildren: '../pages/new-testament/new-testament.module#NewTestamentPageModule', name: 'NewTestamentPage', segment: 'new-testament', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/show-psalm/show-psalm.module#ShowPsalmPageModule', name: 'ShowPsalmPage', segment: 'show-psalm', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/psalms/psalms.module#PsalmsPageModule', name: 'PsalmsPage', segment: 'psalms', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/search/search.module#SearchPageModule', name: 'SearchPage', segment: 'search', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/tests/tests.module#TestsPageModule', name: 'TestsPage', segment: 'tests', priority: 'low', defaultHistory: [] }
+                    ]
+                }),
+                __WEBPACK_IMPORTED_MODULE_9__pages_new_testament_new_testament_module__["NewTestamentPageModule"],
+                __WEBPACK_IMPORTED_MODULE_10__pages_psalms_psalms_module__["PsalmsPageModule"],
+                __WEBPACK_IMPORTED_MODULE_11__pages_tabs_tabs_module__["TabsPageModule"],
+                __WEBPACK_IMPORTED_MODULE_12__pages_tests_tests_module__["TestsPageModule"],
+                __WEBPACK_IMPORTED_MODULE_13__pages_search_search_module__["SearchPageModule"],
+                __WEBPACK_IMPORTED_MODULE_14__pages_show_psalm_show_psalm_module__["ShowPsalmPageModule"]
+            ],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
+            entryComponents: [
+                __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_4__pages_bible_bible__["a" /* BiblePage */],
+                __WEBPACK_IMPORTED_MODULE_5__pages_credits_credits__["a" /* CreditsPage */],
+                __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
+            ],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_8__ionic_native_splash_screen__["a" /* SplashScreen */],
+                { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] }
+            ]
+        })
+    ], AppModule);
+    return AppModule;
+}());
+
+//# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ 254:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewTestamentPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var NewTestamentPage = /** @class */ (function () {
+    function NewTestamentPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    NewTestamentPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad NewTestamentPage');
+    };
+    NewTestamentPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-new-testament',template:/*ion-inline-start:"D:\IONICAPPS\salmos\src\pages\new-testament\new-testament.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Novo Testamento</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"D:\IONICAPPS\salmos\src\pages\new-testament\new-testament.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+    ], NewTestamentPage);
+    return NewTestamentPage;
+}());
+
+//# sourceMappingURL=new-testament.js.map
+
+/***/ }),
+
+/***/ 255:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7277,6 +7225,7 @@ var ShowPsalmPage = /** @class */ (function () {
             if (this.salmos[i].numero == numero) {
                 this.numeroSalmo = this.salmos[i].numero;
                 this.salmo = this.salmos[i].texto;
+                console.log("Número do Salmo => " + this.numeroSalmo);
             }
         }
     }
@@ -7301,6 +7250,63 @@ var ShowPsalmPage = /** @class */ (function () {
 
 /***/ }),
 
+/***/ 256:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TestsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var TestsPage = /** @class */ (function () {
+    function TestsPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.peoples = [
+            {
+                "name": "Douglas  Pace"
+            },
+            {
+                "name": "Mcleod  Mueller"
+            },
+            {
+                "name": "Day  Meyers"
+            },
+            {
+                "name": "Aguirre  Ellis"
+            },
+            {
+                "name": "Cook  Tyson"
+            }
+        ];
+    }
+    TestsPage.prototype.ionViewDidLoad = function () {
+        console.log('TestsPage rodando...');
+    };
+    TestsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-tests',template:/*ion-inline-start:"D:\IONICAPPS\salmos\src\pages\tests\tests.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Tests</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n  <ion-item *ngFor="let item of peoples">\n      {{item.name}}\n  </ion-item>\n</ion-content>\n'/*ion-inline-end:"D:\IONICAPPS\salmos\src\pages\tests\tests.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+    ], TestsPage);
+    return TestsPage;
+}());
+
+//# sourceMappingURL=tests.js.map
+
+/***/ }),
+
 /***/ 274:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -7308,9 +7314,9 @@ var ShowPsalmPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(155);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7338,7 +7344,6 @@ var MyApp = /** @class */ (function () {
     MyApp.prototype.openHomePage = function (splashScreen) {
         splashScreen.hide();
         this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__["a" /* TabsPage */];
-        console.log('Banco de Dados criado com sucesso!');
     };
     MyApp = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"D:\IONICAPPS\salmos\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"D:\IONICAPPS\salmos\src\app\app.html"*/
@@ -7352,5 +7357,5 @@ var MyApp = /** @class */ (function () {
 
 /***/ })
 
-},[204]);
+},[205]);
 //# sourceMappingURL=main.js.map
